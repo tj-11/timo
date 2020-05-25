@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <script>
+  // Get your list of all tables in the document.
+  const tables = document.querySelectorAll('table');
+
+  // Map list of tables to list of number of <td> elements.
+  const lengths =
+    Array.from(tables)
+      .map(table => table.querySelectorAll('td').length)
+
+  // Get the max of the list of lengths and log to console.
+  const max = Math.max(...lengths);
+  console.log(max);
+
+  </script>
+</body>
+</html>
